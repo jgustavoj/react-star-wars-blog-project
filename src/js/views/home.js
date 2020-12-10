@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "../component/card.js";
 import { CardContainer } from "../component/cardContainer.js";
 import "../../styles/home.scss";
 
