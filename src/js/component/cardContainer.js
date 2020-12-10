@@ -5,16 +5,21 @@ import { Card } from "./card.js";
 import "../../styles/home.scss";
 
 export const CardContainer = props => {
-	const { store, actions } = useContext(Context);
+	//const { store, actions } = useContext(Context);
 	return (
 		<>
 			<div className="text-primary">
 				<h2>{props.title}</h2>
 			</div>
 			<div className="d-flex justify-content-between overflow-auto">
-				{store.characters.map(item => {
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+
+				{/* {store.characters.map(item => {
 					<Card character={item} />;
-				})}
+				})} */}
 			</div>
 		</>
 	);
