@@ -1,12 +1,16 @@
 import React from "react";
 import { Card } from "../component/card.js";
-import { cardContainer } from "../component/cardContainer.js";
+import { CardContainer } from "../component/cardContainer.js";
 import "../../styles/home.scss";
 
 export const Home = () => {
 	return (
 		<>
-			<cardContainer />
+			<div className="text-center container mt-5">
+				<CardContainer title={"Characters"} />
+				<CardContainer title={"Planets"} />
+				<CardContainer title={"Starships"} />
+			</div>
 		</>
 	);
 };
