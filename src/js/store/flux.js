@@ -1,11 +1,13 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			characters: []
+			people: [],
+			planets: [],
+			starships: []
 		},
 		actions: {
-			loadCharacters: () => {
-				fetch("https://swapi.dev/api/people/", {
+			loadItems: itemNature => {
+				fetch(`https://swapi.dev/api/${itemNature}/`, {
 					method: "GET"
 				})
 					.then(function(response) {
@@ -17,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(function(responseAsJson) {
 						//console.log("responseAsJson", responseAsJson);
-						setStore({ characters: responseAsJson.results });
+						setStore({ [itemNature]: responseAsJson.results });
 					});
 				// .catch(function(error) {
 				// 	//console.log("Looks like there was a problem: \n", error);
