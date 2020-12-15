@@ -3,9 +3,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			people: [],
 			planets: [],
-			starships: []
+			starships: [],
+			favorites: []
 		},
 		actions: {
+			addFavorite: name => {
+				const newStore = getStore();
+				newStore.favorites.push(name);
+				setStore({ newStore });
+			},
+			deleteFavorites: index => {
+				const newStore = getStore();
+				let newFavorites = newStore.favorites.filter((item, ind) => index !== ind);
+				setStore({ favorites: newFavorites });
+			},
 			loadItems: itemNature => {
 				fetch(`https://swapi.dev/api/${itemNature}/`, {
 					method: "GET"

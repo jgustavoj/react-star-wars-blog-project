@@ -9,8 +9,8 @@ export const Single = props => {
 
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {params.itemNature}</h1>
-			<h2 className="display-4">This will show the demo element: {params.name}</h2>
+			{/* <h1 className="display-4">This will show the demo element: {params.itemNature}</h1> */}
+			<h2 className="display-4">{params.name}</h2>
 
 			<hr className="my-4" />
 

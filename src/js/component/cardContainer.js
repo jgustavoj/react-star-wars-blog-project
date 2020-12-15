@@ -18,10 +18,6 @@ export const CardContainer = props => {
 			<div className="d-flex justify-content-between overflow-auto">
 				{store[props.title] &&
 					store[props.title].map(item => <Card item={item} key={item.url} nature={props.title} />)}
-
-				{/* {store.characters.map(item => {
-					<Card character={item} />;
-				})} */}
 			</div>
 		</>
 	);
