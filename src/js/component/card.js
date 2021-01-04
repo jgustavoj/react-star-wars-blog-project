@@ -7,7 +7,7 @@ import storm from "../../img/storm.jpg";
 import "../../styles/home.scss";
 
 export const Card = props => {
-	const { store, action } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	return (
 		<>
 			<div className="card ml-3 mr-3" style={{ minWidth: "18rem" }}>
