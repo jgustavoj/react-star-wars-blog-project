@@ -15,11 +15,20 @@ export const Card = props => {
 				<div className="card-body">
 					<h5 className="card-title">{props.item.name}</h5>
 
-					<p className="card-text">
-						Some quick example text to build on the card title and make up the bulk of the {"card's"}{" "}
-						content.
-					</p>
-
+					{"gender" in props.item && <p className="card-text">{`Gender: ${props.item.gender}`}</p>}
+					{"hair_color" in props.item && (
+						<p className="card-text">{`Hair Color: ${props.item.hair_color}`}</p>
+					)}
+					{"eye_color" in props.item && <p className="card-text">{`Eye-Color: ${props.item.eye_color}`}</p>}
+					{"population" in props.item && (
+						<p className="card-text">{`Population: ${props.item.population}`}</p>
+					)}
+					{"climate" in props.item && <p className="card-text">{`Climate: ${props.item.climate}`}</p>}
+					{"terrain" in props.item && <p className="card-text">{`Terrain: ${props.item.terrain}`}</p>}
+					{"model" in props.item && <p className="card-text">{`Model: ${props.item.model}`}</p>}
+					{"manufacturer" in props.item && (
+						<p className="card-text">{`Manufacturer: ${props.item.manufacturer}`}</p>
+					)}
 					<Link to={`/${props.nature}/${props.item.name}`} className="btn btn-primary">
 						Details
 					</Link>
