@@ -26,6 +26,7 @@ export const Single = props => {
 			</div>
 
 			<hr className="my-4" />
+
 			<p>Test</p>
 
 			<Link to="/">
@@ -39,4 +40,7 @@ export const Single = props => {
 
 Single.propTypes = {
 	match: PropTypes.object
+	// item: PropTypes.object,
+	// nature: PropTypes.string,
+	// title: PropTypes.string
 };
