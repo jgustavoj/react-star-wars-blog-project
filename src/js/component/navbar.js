@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	const [isOpen, setIsOpen] = useState();
-	const handleClick = () => {};
+	//const handleClick = () => {};
 
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light bg-none mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Star Wars Blog</span>
+				<span className="navbar-brand mb-0 h1">Star Wars</span>
 			</Link>
 			<div className="ml-auto">
 				<button className="btn btn-primary" onClick={() => setIsOpen(!isOpen)}>
@@ -22,7 +22,7 @@ export const Navbar = () => {
 						return (
 							<li key={index}>
 								{item}
-								<button onClick={() => actions.deleteFavorite(index)}>
+								<button onClick={() => actions.deleteFavorites(index)}>
 									<i className="fas fa-times" />
 								</button>
 							</li>
