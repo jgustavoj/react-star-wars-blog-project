@@ -7,6 +7,17 @@ import storm from "../../img/storm.jpg";
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const [item, setItem] = useState(null);
+	useEffect(() => {
+		for (let object of store[params.itemNature]) {
+			if (object.name == params.name) {
+				setItem(object);
+				break;
+			}
+		}
+	}, [store, params]);
+
+	//this works because names are unique and no ID available
 
 	return (
 		<div className="jumbotron">
@@ -27,7 +38,19 @@ export const Single = props => {
 
 			<hr className="my-4" />
 
-			<p>Test</p>
+			{item != null &&
+				(params.itemNature == "people" ? (
+					<>
+						<p>
+							Eye Color <br />
+							{item.eye_color}
+						</p>
+					</>
+				) : params.itemNature == "planets" ? (
+					<p>{item.population}</p>
+				) : (
+					<p>{item.passengers}</p>
+				))}
 
 			<Link to="/">
 				<span className="btn btn-primary btn-lg float-right" href="#" role="button">
@@ -40,7 +63,4 @@ export const Single = props => {
 
 Single.propTypes = {
 	match: PropTypes.object
-	// item: PropTypes.object,
-	// nature: PropTypes.string,
-	// title: PropTypes.string
 };
