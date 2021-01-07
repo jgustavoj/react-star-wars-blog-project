@@ -172,7 +172,3 @@ export const Single = () => {
 		</div>
 	);
 };
-
-// Single.propTypes = {
-// 	match: PropTypes.object
-// };

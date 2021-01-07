@@ -47,5 +47,4 @@ export const Card = props => {
 Card.propTypes = {
 	item: PropTypes.object,
 	nature: PropTypes.string
-	// index: PropTypes.number
 };

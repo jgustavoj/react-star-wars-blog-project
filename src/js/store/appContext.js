@@ -20,10 +20,6 @@ const injectContext = PassedComponent => {
 					})
 			})
 		);
-		//useEffect(() => {
-		//	state.actions.loadCharacters();
-		//}, []);
-
 		return (
 			<Context.Provider value={state}>
 				<PassedComponent {...props} />
