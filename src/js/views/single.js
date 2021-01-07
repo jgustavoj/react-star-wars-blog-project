@@ -38,54 +38,52 @@ export const Single = () => {
 			<hr className="my-4" />
 			{item != null &&
 				(params.itemNature == "people" ? (
-					<>
-						<div className="d-flex justify-content-around" id="bold">
-							<div>
-								<p>
-									Birth Year <br />
-								</p>
-								{item.birth_year}
-							</div>
-							<div>
-								<p>
-									Eye Color <br />
-								</p>
-								{item.eye_color}
-							</div>
-							<div>
-								<p>
-									Gender <br />
-								</p>
-								{item.gender}
-							</div>
-							<div>
-								<p>
-									Hair Color <br />
-								</p>
-								{item.hair_color}
-							</div>
-							<div>
-								<p>
-									Height <br />
-								</p>
-								{item.height}
-							</div>
-							<div>
-								<p>
-									Mass <br />
-								</p>
-								{item.mass}
-							</div>
-							<div>
-								<p>
-									Skin Color <br />
-								</p>
-								{item.skin_color}
-							</div>
+					<div className="d-flex justify-content-around" id="bold">
+						<div>
+							<p>
+								Birth Year <br />
+							</p>
+							{item.birth_year}
 						</div>
-					</>
+						<div>
+							<p>
+								Eye Color <br />
+							</p>
+							{item.eye_color}
+						</div>
+						<div>
+							<p>
+								Gender <br />
+							</p>
+							{item.gender}
+						</div>
+						<div>
+							<p>
+								Hair Color <br />
+							</p>
+							{item.hair_color}
+						</div>
+						<div>
+							<p>
+								Height <br />
+							</p>
+							{item.height}
+						</div>
+						<div>
+							<p>
+								Mass <br />
+							</p>
+							{item.mass}
+						</div>
+						<div>
+							<p>
+								Skin Color <br />
+							</p>
+							{item.skin_color}
+						</div>
+					</div>
 				) : params.itemNature == "planets" ? (
-					<div className="d-flex justify-content-around">
+					<div className="d-flex justify-content-around" id="bold">
 						<div>
 							<p>Climate</p>
 							{item.climate}
@@ -124,9 +122,53 @@ export const Single = () => {
 						</div>
 					</div>
 				) : (
-					<p>{item.passengers}</p>
+					<div className="d-flex justify-content-around" id="bold">
+						<div>
+							<p>MGTL</p>
+							{item.MGLT}
+						</div>
+						<div>
+							<p> Cargo Capacity</p>
+							{item.cargo_capacity}
+						</div>
+						<div>
+							<p>Consumables</p>
+							{item.consumables}
+						</div>
+						<div>
+							<p> Cost in Credits</p>
+							{item.cost_in_credits}
+						</div>
+						<div>
+							<p>Crew</p>
+							{item.crew}
+						</div>
+						<div>
+							<p>Hyperdrive Rating</p>
+							{item.hyperdrive_rating}
+						</div>
+						<div>
+							<p>Length</p>
+							{item.length}
+						</div>
+						<div>
+							<p>Manufacturer</p>
+							{item.manufacturer}
+						</div>
+						<div>
+							<p>Max Atmosphering Speed</p>
+							{item.max_atmosphering_speed}
+						</div>
+						<div>
+							<p> Model</p>
+							{item.model}
+						</div>
+						<div>
+							<p>Passengers</p>
+							{item.passengers}
+						</div>
+					</div>
 				))}
-			;
 		</div>
 	);
 };
