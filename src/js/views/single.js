@@ -39,53 +39,90 @@ export const Single = () => {
 			{item != null &&
 				(params.itemNature == "people" ? (
 					<>
-						<div className="d-flex justify-content-around">
+						<div className="d-flex justify-content-around" id="bold">
 							<div>
-								<strong>
+								<p>
 									Birth Year <br />
-								</strong>
+								</p>
 								{item.birth_year}
 							</div>
 							<div>
-								<strong>
+								<p>
 									Eye Color <br />
-								</strong>
+								</p>
 								{item.eye_color}
 							</div>
 							<div>
-								<strong>
+								<p>
 									Gender <br />
-								</strong>
+								</p>
 								{item.gender}
 							</div>
 							<div>
-								<strong>
+								<p>
 									Hair Color <br />
-								</strong>
+								</p>
 								{item.hair_color}
 							</div>
 							<div>
-								<strong>
+								<p>
 									Height <br />
-								</strong>
+								</p>
 								{item.height}
 							</div>
 							<div>
-								<strong>
+								<p>
 									Mass <br />
-								</strong>
+								</p>
 								{item.mass}
 							</div>
 							<div>
-								<strong>
+								<p>
 									Skin Color <br />
-								</strong>
+								</p>
 								{item.skin_color}
 							</div>
 						</div>
 					</>
 				) : params.itemNature == "planets" ? (
-					<p>{item.population}</p>
+					<div className="d-flex justify-content-around">
+						<div>
+							<p>Climate</p>
+							{item.climate}
+						</div>
+						<div>
+							<p>Diameter</p>
+							{item.diameter}
+						</div>
+						<div>
+							<p>Gravity</p>
+							{item.gravity}
+						</div>
+						<div>
+							<p>Diameter</p>
+							{item.diameter}
+						</div>
+						<div>
+							<p>Orbital Period</p>
+							{item.orbital_period}
+						</div>
+						<div>
+							<p>Population</p>
+							{item.population}
+						</div>
+						<div>
+							<p>Rotation Period</p>
+							{item.rotation_period}
+						</div>
+						<div>
+							<p>Surface Water</p>
+							{item.surface_water}
+						</div>
+						<div>
+							<p>Terrain</p>
+							{item.terrain}
+						</div>
+					</div>
 				) : (
 					<p>{item.passengers}</p>
 				))}
