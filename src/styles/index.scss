@@ -8,6 +8,9 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: font-family-special;
+    font-size: 16px;
+    //font-size: 1.05rem;
 
 }
 
@@ -16,14 +19,26 @@ body{
 }
 
 img {
-  box-shadow: 15px 15px 5px grey;
+  //box-shadow: 15px 15px 5px grey;
+    filter: drop-shadow(2rem 2rem 8rem black);
 }
 
 // #container-color{
 //     background-color: rgb(22, 22, 22);
 // }
 
-#card-image{
-      box-shadow: 1px 10px 5px black;
+// #card-image{
+//     box-shadow: 1px 10px 7px black;
+    
 
+// }
+
+.btn {
+    
+    filter: drop-shadow(.5rem .5rem 1rem black);
+    padding: 0.8rem;
+    font-size: 75%;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  
 }

@@ -10,7 +10,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-none mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1" style={{ color: "yellow" }}>
+				<span className="navbar-brand mb-0 h1" style={{ color: "yellow", fontSize: "2rem" }}>
 					Star Wars
 				</span>
 			</Link>
