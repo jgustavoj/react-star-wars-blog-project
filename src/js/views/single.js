@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import storm from "../../img/storm.jpg";
+import ship from "../../img/ship.jpg";
 
 export const Single = () => {
 	const { store, actions } = useContext(Context);
@@ -22,7 +23,7 @@ export const Single = () => {
 	return (
 		<div className="jumbotron">
 			<div className="d-flex justify-content-start">
-				<img className="card-img-top" src={storm} style={{ width: 600, height: 450 }} alt="Card image cap" />
+				<img className="card-img-top" src={ship} style={{ width: 600, height: 450 }} alt="Card image cap" />
 
 				<div className="d-flex flex-column ml-5">
 					<h2 className="display-4">{params.name}</h2>

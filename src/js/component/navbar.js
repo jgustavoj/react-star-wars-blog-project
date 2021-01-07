@@ -10,14 +10,16 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-none mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Star Wars</span>
+				<span className="navbar-brand mb-0 h1" style={{ color: "yellow" }}>
+					Star Wars
+				</span>
 			</Link>
 			<div className="ml-auto">
-				<button className="btn btn-primary" onClick={() => setIsOpen(!isOpen)}>
+				<button className="btn btn-dark" onClick={() => setIsOpen(!isOpen)}>
 					Favorites
-					<span className="badge badge-secondary">{store.favorites.length}</span>
+					<span className="badge badge-warning">{store.favorites.length}</span>
 				</button>
-				<div className={isOpen ? "d-block" : "d-none"}>
+				<div className={isOpen ? "d-block text-white bg-dark" : "d-none"}>
 					{store.favorites.map((item, index) => {
 						return (
 							<li key={index}>

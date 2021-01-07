@@ -12,7 +12,7 @@ export const CardContainer = props => {
 	}, []);
 	return (
 		<>
-			<div className="text-primary">
+			<div className="text-warning">
 				{/* passes the title of the people, planets and ships dynamically */}
 				<h2>{`${props.title.charAt(0).toUpperCase()}${props.title.slice(1)}`}</h2>
 			</div>

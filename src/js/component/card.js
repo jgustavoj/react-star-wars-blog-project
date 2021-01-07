@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import storm from "../../img/storm.jpg";
+import placeholder2 from "../../img/placeholder2.jpg";
 
 import "../../styles/home.scss";
 
@@ -11,7 +12,7 @@ export const Card = props => {
 	return (
 		<>
 			<div className="card ml-3 mr-3" style={{ minWidth: "18rem" }}>
-				<img className="card-img-top" src={storm} alt="Card image cap" />
+				<img className="card-img-top" src={placeholder2} alt="Card image cap" id="card-image" />
 				<div className="card-body">
 					<h5 className="card-title">{props.item.name}</h5>
 

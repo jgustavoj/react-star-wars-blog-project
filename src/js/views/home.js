@@ -5,7 +5,7 @@ import "../../styles/home.scss";
 export const Home = () => {
 	return (
 		<>
-			<div className="text-center container mt-5">
+			<div className="text-center container mt-5" id="container-color">
 				<CardContainer title={"people"} />
 				<CardContainer title={"planets"} />
 				<CardContainer title={"starships"} />
