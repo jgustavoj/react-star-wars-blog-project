@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import storm from "../../img/storm.jpg";
 
-export const Single = props => {
+export const Single = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	const [item, setItem] = useState(null);
@@ -17,7 +17,7 @@ export const Single = props => {
 		}
 	}, [store, params]);
 
-	//this works because names are unique and no ID available
+	//this scenario works because names are unique and no ID available to pull from
 
 	return (
 		<div className="jumbotron">
@@ -35,32 +35,65 @@ export const Single = props => {
 					</p>
 				</div>
 			</div>
-
 			<hr className="my-4" />
-
 			{item != null &&
 				(params.itemNature == "people" ? (
 					<>
-						<p>
-							Eye Color <br />
-							{item.eye_color}
-						</p>
+						<div className="d-flex justify-content-around">
+							<div>
+								<strong>
+									Birth Year <br />
+								</strong>
+								{item.birth_year}
+							</div>
+							<div>
+								<strong>
+									Eye Color <br />
+								</strong>
+								{item.eye_color}
+							</div>
+							<div>
+								<strong>
+									Gender <br />
+								</strong>
+								{item.gender}
+							</div>
+							<div>
+								<strong>
+									Hair Color <br />
+								</strong>
+								{item.hair_color}
+							</div>
+							<div>
+								<strong>
+									Height <br />
+								</strong>
+								{item.height}
+							</div>
+							<div>
+								<strong>
+									Mass <br />
+								</strong>
+								{item.mass}
+							</div>
+							<div>
+								<strong>
+									Skin Color <br />
+								</strong>
+								{item.skin_color}
+							</div>
+						</div>
 					</>
 				) : params.itemNature == "planets" ? (
 					<p>{item.population}</p>
 				) : (
 					<p>{item.passengers}</p>
 				))}
-
-			<Link to="/">
-				<span className="btn btn-primary btn-lg float-right" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+			;
 		</div>
 	);
 };
 
-Single.propTypes = {
-	match: PropTypes.object
-};
+// Single.propTypes = {
+// 	match: PropTypes.object
+// };
