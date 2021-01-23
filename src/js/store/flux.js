@@ -9,9 +9,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			addFavorite: name => {
 				const newStore = getStore();
-				newStore.favorites.push(name);
-				setStore({ newStore });
+				let item = newStore.favorites.find(value => value == name); // this method has a conditional that doesnt allow to add multiple items that are the same
+				if (item != name) {
+					let updatedFavorites = newStore.favorites.concat(name);
+					setStore({ favorites: updatedFavorites });
+				}
 			},
+			// addFavorite: name => {
+			// 	let newStore = getStore();
+			// 	newStore.favorites.push(name);
+			//     setStore({ newStore });
+			//     //this method allows you to add multiples items that are the same
+			// },
+
 			deleteFavorites: index => {
 				const newStore = getStore();
 				let newFavorites = newStore.favorites.filter((item, ind) => index !== ind);
