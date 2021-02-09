@@ -22,9 +22,9 @@ export const Navbar = () => {
 				<div className={isOpen ? "d-block text-white bg-dark" : "d-none"}>
 					{store.favorites.map((item, index) => {
 						return (
-							<li key={index}>
+							<li className="ml-3" key={index}>
 								{item}
-								<button onClick={() => actions.deleteFavorites(index)}>
+								<button className="ml-3" onClick={() => actions.deleteFavorites(index)}>
 									<i className="fas fa-times" />
 								</button>
 							</li>
