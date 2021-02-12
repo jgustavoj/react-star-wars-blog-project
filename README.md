@@ -27,7 +27,7 @@
 
 1. Clone Repo:
 ```
-$ git clone https://github.com/jgustavoj/react-thescheduleguy-frontend-project.git
+$ git clone https://github.com/jgustavoj/react-star-wars-blog-project.git
 ```
 2. Install the packages:
 ```
