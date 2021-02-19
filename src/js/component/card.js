@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import storm from "../../img/storm.jpg";
+import { storm } from "../../img/storm.jpg";
 import placeholder2 from "../../img/placeholder2.jpg";
 
 import "../../styles/home.scss";
