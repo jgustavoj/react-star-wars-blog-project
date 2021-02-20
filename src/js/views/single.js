@@ -24,9 +24,10 @@ export const Single = () => {
 			<div className="d-flex justify-content-start">
 				<img
 					className="card-img-top"
-					src={
-						"https://ca-times.brightspotcdn.com/dims4/default/2136bd7/2147483647/strip/true/crop/3840x1620+0+0/resize/840x354!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8d%2Fc8%2Fdce883264433bd5afe0f86eb85cf%2Fthemandalorianpedropascal.jpg"
-					}
+					src={ship}
+					//"https://ca-times.brightspotcdn.com/dims4/default/2136bd7/2147483647/strip/true/crop/3840x1620+0+0/resize/840x354!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8d%2Fc8%2Fdce883264433bd5afe0f86eb85cf%2Fthemandalorianpedropascal.jpg"
+					//{require("../../img/ship.jpg")}
+
 					style={{ width: 600, height: 450 }}
 					alt="Card image cap"
 				/>
