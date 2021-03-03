@@ -7,7 +7,7 @@
 <p> A Front-End blog that illustrates Star Wars details. The application utilizes an API to display information on characters, planets, and star-ships general information on the films from the official website for any fan to enjoy. It uses props and context and the top-level to dynamically fetch and pass data to its children.</p>
 
 
- **Live Source Coming Soon** :raised_hands:
+ **Live Source ** :raised_hands: https://star-wars-blog-iota.vercel.app/
 
 ## Technologies
 
